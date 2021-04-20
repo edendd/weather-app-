@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div  class="container">
+      <div class="weather-app-wrapper">
+      <div class = "weather-app" id ='gradient-custom'>
+
+        <div class="search-container" id="search">
+       
+          <form class="form-group row">
+                <div class="form-group mb-2">
+                  <input type="Search" 
+                   class="form-control-plaintext" 
+                   id="search-input" 
+                   autocomplete="off"
+                   
+                   placeholder = "Enter City Name ...">
+                   
+                </div>
+                <button type="submit" class="myButton" >SEARCH</button>
+              </form>
+           
+          </div>
+
+
+      <h1 id="weather">Saint Louis</h1>
+     
+      <h2 class="update-date" >Last updated <span id="dateView"></span></h2>
+
+        <h2>
+          <img src="" alt="" id="icon">
+          <span id="Temp">55</span>°<a href="#" id="Flink" >F</a>/<a href="#" id="Clink" class="active">°C</a> 
+        </h2>
+    
+     <h4 id="descriptionWE">cloudy</h4>
+
+   <button  id= "location" class="myButton">Current Location</button>
+
+      <h3 class="values">Humidity: <span id ="Humidity"></span>% <br>
+        wind: <span id = "wind"></span>MPH <br></h3>
+  
+      
+<div class="row">
+ 
+   
+<div class="col-3">Fri</div>
+<div class="col-3">Sat</div>
+<div class="col-3">Sun</div>
+<div class="col-3">Mon</div>
+
+
+</div>
+<div class="row">
+    <div class="col-3">53°</div>
+    <div class="col-3">56°</div>
+    <div class="col-3">63°</div>
+    <div class="col-3">60°</div>
+    
+    
+</div>
+<div class="row">
+    <div class="col-3">32°</div>
+    <div class="col-3">41°</div>
+    <div class="col-3">46°</div>
+    <div class="col-3">52°</div>
+    
+    
+</div>
+
+<div class="row">
+    <div  class="col-3">⛅ </div>
+    <div  class="col-3">🌅  </div>
+    <div  class="col-3">🌅 </div>
+    <div  class="col-3">⛅ </div>
+    
+           </div>  
+        </div>
+     </div>
+</div>
+    <script src="script.js"></script>
+  </body>
+</html>
