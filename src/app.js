@@ -9,15 +9,8 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",];
+  
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
@@ -30,7 +23,7 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-
+//display forcast function the six days
 
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -101,6 +94,7 @@ function displayTemperature(response) {
   getForecast(response.data.coord);
 }
 
+
 function search(city) {
   let apiKey = "977e7cf2f6ebb86ab22f897eca8c19de";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -116,7 +110,7 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("New York");
+search("Saint Louis");
 
 function showPosition(position){
   let latitude = position.coords.latitude;
