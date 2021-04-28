@@ -1,98 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
 
-  <body>
-    <div  class="container">
-      <div class="weather-app-wrapper">
-      <div class = "weather-app" id ='gradient-custom'>
-
-        <div class="search-container" id="search">
-       
-          <form class="form-group row">
-                <div class="form-group mb-2">
-                  <input type="Search" 
-                   class="form-control-plaintext" 
-                   id="search-input" 
-                   autocomplete="off"
-                   
-                   placeholder = "Enter City Name ...">
-                   
-                </div>
-                <button type="submit" class="myButton" >SEARCH</button>
-              </form>
-           
-          </div>
-
-
-      <h1 id="weather">Saint Louis</h1>
-     
-      <h2 class="update-date" >Last updated <span id="dateView"></span></h2>
-
-        <h2>
-          <img src="" alt="" id="icon">
-          <span id="Temp">55</span>°<a href="#" id="Flink" >F</a>/<a href="#" id="Clink" class="active">°C</a> 
-        </h2>
-    
-     <h4 id="descriptionWE">cloudy</h4>
-
-   <button  id= "location" class="myButton">Current Location</button>
-
-      <h3 class="values">Humidity: <span id ="Humidity"></span>% <br>
-        wind: <span id = "wind"></span>MPH <br></h3>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
   
-      
-<div class="row">
- 
-   
-<div class="col-3">Fri</div>
-<div class="col-3">Sat</div>
-<div class="col-3">Sun</div>
-<div class="col-3">Mon</div>
-
-
-</div>
-<div class="row">
-    <div class="col-3">53°</div>
-    <div class="col-3">56°</div>
-    <div class="col-3">63°</div>
-    <div class="col-3">60°</div>
-    
-    
-</div>
-<div class="row">
-    <div class="col-3">32°</div>
-    <div class="col-3">41°</div>
-    <div class="col-3">46°</div>
-    <div class="col-3">52°</div>
-    
-    
-</div>
-
-<div class="row">
-    <div  class="col-3">⛅ </div>
-    <div  class="col-3">🌅  </div>
-    <div  class="col-3">🌅 </div>
-    <div  class="col-3">⛅ </div>
-    
-           </div>  
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper" id = "gradient-custom">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                  id="myButton"
+                />
+               
+              </div>
+            </div>
+          </form>
+          
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"> °C</span>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Current-location"
+                class="btn btn-primary w-200"
+                id="locationButton"
+              />
+             
+            </div>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small class="source-link">
+        <small>
           <a
-            href="https://github.com/edendd/weather-app-"
+            href="#"
             target="_blank"
             >Open-source code</a
           >
           by Eden Dadi
         </small>
-     </div>
-</div>
-    <script src="script.js"></script>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
